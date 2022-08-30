@@ -1,0 +1,18 @@
+// GLOBALS
+@import "./partials/features";
+@import './partials/basic';
+@import "./partials/fonts";
+@import "./partials/lazy-load";
+
+// COMPONENTS
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/buttons/button';
+@import '../components/fields/field';
+@import '../components/navbar/navbar';
+
+// PAGES
+@import '../pages/home/home';
+@import '../pages/about/about';
+@import '../pages/error/error';
+

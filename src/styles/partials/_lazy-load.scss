@@ -1,0 +1,47 @@
+@media screen and (min-width: 576px) {
+    [data-lazy] {
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+
+    [data-lazy="fade"] {
+        opacity: 0;
+        &.lazy-animate {
+            transition-delay: 0.5s;
+        }
+    }
+
+    [data-lazy="fade-up"] {
+        transform: translate3d(0, 100px, 0);
+    }
+    [data-lazy="fade-up-sm"] {
+        transform: translate3d(0, 30px, 0);
+    }
+    [data-lazy="fade-down"] {
+        transform: translate3d(0, -100px, 0);
+    }
+    [data-lazy="fade-left"] {
+        transform: translate3d(100px, 0, 0);
+    }
+    [data-lazy="panel"] {
+        transform: translateY(-100%);
+    }
+
+    .lazy-animate {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+
+    .animating {
+        transition-property: opacity, transform !important;
+        transition-timing-function: ease-in, ease-out !important;
+        transition-duration: 0.7s !important;
+        // transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+    }
+}
+
+header,
+main,
+footer {
+    // overflow: hidden;
+}

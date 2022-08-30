@@ -1,0 +1,43 @@
+
+.hero {
+    margin-top: 65px;
+    min-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-center {
+        text-align: center;
+    }
+    &-title {
+        margin-top: -1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    &-description {
+        font-size: 26px;
+        font-family: Ebrima;
+        margin: 0 auto 3rem;
+        max-width: 340px;
+    }
+    .btn {
+        text-transform: uppercase;
+        color: color(light);
+    }
+}
+
+@include mq(1280px){
+    .hero {
+    margin-top: 148px;
+        &-center {
+            margin-right: -100px;
+        }
+        &-description {
+            max-width: 100%;
+        }
+    }
+}

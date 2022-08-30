@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sample</title>
+        <link rel="icon" href="./src/assets/images/favicon.png" />
+        <meta name="keywords" content="website, template, sample" />
+        <meta name="description" content="this sample created for prototyping porpuces" />
+        <meta name="author" content="Karen Werner" />
+        <link rel="stylesheet" href="./src/styles/index.css" />
+        <!-- SCRIPTS -->
+        <script src="./src/scripts/script.js" defer></script>
+        <script src="./src/components/buttons/button.js" defer></script>
+        <script src="./src/components/navbar/navbar.js" defer></script>
+        <script src="./src/scripts/fadeOnScreen.js" defer></script>
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="Sample" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="this sample created for prototyping purposes" />
+        <meta property="og:image" content="./src/assets/images/example.jpg" />
+        <meta property="og:url" content="https://sample.com" />
+        <!-- TWITTER CARDS -->
+        <meta name="twitter:title" content="Sample" />
+        <meta name="twitter:description" content="this sample created for prototyping purposes" />
+        <meta name="twitter:image" content="./src/assets/images/example.jpg" />
+        <meta name="twitter:url" content="https://sample.com" />
+        <meta name="twitter:card" content="summary" />
+    </head>
+    <body>
+        <header
+            data-lazy-block
+            class="hero"
+            style="background-image: url('./src/assets/images/background-thumbnail.jpg')"
+            data-cover-src="./src/assets/images/background.jpg"
+            id="hero"
+        >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img class="logo" src="./src/assets/images/icons/logo.svg" alt="" />
+                        <img class="logo-sm" src="./src/assets/images/icons/logo-sm.svg" alt="" />
+                    </a>
+                    <button class="navbar-toggler" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="wrapper">
+                            <div class="info">
+                                <a
+                                    href="mailto:thelocalsharpener2017@gmail.com"
+                                    target="_blank"
+                                    underline="hover"
+                                    class="link-dark"
+                                >
+                                    <img src="./src/assets/images/icons/message.svg" alt="" />
+                                    thelocalsharpener2017@gmail.com
+                                </a>
+                                <a
+                                    href="https://www.google.com/maps/place/Cowpens,+SC+29330,+USA/@35.0205108,-81.8139018,15z/data=!3m1!4b1!4m5!3m4!1s0x88570b8bf45c5f43:0x4aada5b865242036!8m2!3d35.0167918!4d-81.8039916"
+                                    target="_blank"
+                                    underline="hover"
+                                    class="link-dark"
+                                >
+                                    <img src="./src/assets/images/icons/location.svg" alt="" />
+                                    Cowpens, South Carolina 29330
+                                </a>
+                                <a href="tel:864-245-4359" underline="hover" class="link-dark">
+                                    <img src="./src/assets/images/icons/telephone.svg" alt="" />
+                                    864-245-4359
+                                </a>
+                            </div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#/">about</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#/">service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#/">product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#/">contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#/">make a payment</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-search">
+                            <button class="btn btn-text-light" type="submit">
+                                <svg
+                                    version="1.2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 28 28"
+                                    width="28"
+                                    height="28"
+                                >
+                                    <defs>
+                                        <image
+                                            width="28"
+                                            height="28"
+                                            id="img1"
+                                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAAXNSR0IB2cksfwAAAWJQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+cz50QAAAHZ0Uk5TACV+vODw58eQPwEhr/qzajA2XZvvz0NV86EeC3b0jQNj9VQo3KU89kUb338I3TT4LtYEktH7Ghz9EMlhTtVmuHKttHCwzYaaKm7lTA8rhcwV8U0Z6ga/qybSDgLi61Lk13UFIF+9iCS6/vzFeBOXL5zTEQq+xHK7DkUAAAEdSURBVHicY2CAAEYmZhZWNnYOTi4GdMDNw8vHzykgKCQsIiqGJicuISkFZUrLyMrJI8spKCoh8ZRVVJGMVlPXQDFHU0sbztbRlUGzRU/fAMbkNzRCd58xD4xlooDpeFMzCMPcwhJDksHKGkLb2GLKMXAYQ2g7eyySDo5Q9zhhkXR2gdDirlgk3dwhtIe6DqakvSeE5vLyxpDz0feFsvwwXSTjD2MFBAahyQWLIAyzC+FGkQsNC0fiuetGIPGk+SKjkLjyHIEK0TCOmmFMrC8DMoiLT0g0SGLgSk5JldVOSotPR7XHOkM9k5U3KzsnF8jLizdHc2O0eb5mKITJVaCCLovsClXbADyyLoVFuGVD+ax8cMsWl5QW45FNDQIAxMUnRh0klUsAAAAASUVORK5CYII="
+                                        />
+                                    </defs>
+                                    <style></style>
+                                    <use href="#img1" x="0" y="0" />
+                                </svg>
+                            </button>
+                            <input
+                                class="form-control form-control-light"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="hero-center" data-lazy="fade">
+                    <h1 class="hero-title display-1">master distributor</h1>
+                    <p class="hero-description">Bringing you ABOVE SHEARS at the best price</p>
+                    <div class="btn btn-lg btn-warning rounded-pill">view products</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-page">
+            <section class="why-us" data-lazy-block>
+                <div class="container">
+                    <div class="why-us-center">
+                        <div class="why-us-cover">
+                            <div class="panel">
+                                <div class="panel-inner bg-warning" data-lazy="panel"></div>
+                            </div>
+                            <img data-lazy="fade-up" src="./src/assets/images/why-us.png" alt="" />
+                        </div>
+                        <div class="info">
+                            <h2 class="display-2 why-us-title with-hat">
+                                <div class="startIcon" data-lazy="fade-down">
+                                    <img src="./src/assets/images/icons/hat.png" alt="" />
+                                </div>
+                                Why Exceptional Edges
+                            </h2>
+                            <h3 class="why-us-subtitle text-warning">
+                                Because I know your business depends on using the best tools in the industry
+                            </h3>
+                            <p class="why-us-description">
+                                My years of experience in the industry along with traveling around the country on a
+                                regular basis to meet the people that use our products, I am keenly aware of what is
+                                expected. My goal is to exceed expectations.
+                            </p>
+
+                            <ul class="list">
+                                <li class="list-item" data-lazy="fade">
+                                    <span class="startIcon">
+                                        <img src="./src/assets/images/icons/checkmark.png" alt="" />
+                                    </span>
+                                    30 day money back guarantee
+                                </li>
+                                <li class="list-item" data-lazy="fade">
+                                    <span class="startIcon">
+                                        <img src="./src/assets/images/icons/checkmark.png" alt="" />
+                                    </span>
+                                    Affordable pricing; free ground shipping anywhere in the Continental USA for any
+                                    orders over $200
+                                </li>
+                                <li class="list-item" data-lazy="fade">
+                                    <span class="startIcon">
+                                        <img src="./src/assets/images/icons/checkmark.png" alt="" />
+                                    </span>
+                                    Local sharpening available
+                                </li>
+                            </ul>
+
+                            <a href="#/" class="btn btn-warning rounded-pill">
+                                <span class="center"> Learn more </span>
+                                <span class="endIcon">
+                                    <img src="./src/assets/images/icons/arrow-right.svg" alt="" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products" data-lazy-block>
+                <div class="products-background"></div>
+                <div class="container">
+                    <h2 class="products-title with-hat display-2">
+                        <div class="startIcon" data-lazy="fade-down">
+                            <img src="./src/assets/images/icons/hat.png" alt="" />
+                        </div>
+                        Featured Products
+                    </h2>
+                    <h3 class="products-subtitle">Shears for Hair Salons and Scissors for Groomers</h3>
+                    <div class="products-center">
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                        <div class="card product-card" data-lazy="fade-up">
+                            <div class="card-header">
+                                <img src="./src/assets/images/scissor.png" alt="" class="card-image" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Above Ergo 27T Texturizing Hair Cutting Shear</h4>
+                                <a href="#/" class="link-warning">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#/" class="btn btn-warning rounded-pill">
+                        <span class="center"> View All </span>
+                        <span class="endIcon"><img src="./src/assets/images/icons/arrow-right.svg" alt="" /></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="providing" data-lazy-block>
+                <div class="providing-center">
+                    <div class="cover">
+                        <img src="./src/assets/images/providing.jpg" alt="" />
+                    </div>
+                    <div class="info">
+                        <h2 class="display-2 providing-title with-hat">
+                            <div class="startIcon" data-lazy="fade-down">
+                                <img src="./src/assets/images/icons/hat.png" alt="" />
+                            </div>
+                            Providing High Quality Products
+                        </h2>
+                        <ul class="list">
+                            <li class="list-item" data-lazy="fade-up-sm">
+                                <img src="./src/assets/images/icons/scissor.svg" alt="" />
+                                ERGONOMIC HANDLES
+                            </li>
+                            <li class="list-item" data-lazy="fade-up-sm">
+                                <img src="./src/assets/images/icons/scissor.svg" alt="" />
+                                EXAGGERATED FINGER REST
+                            </li>
+                            <li class="list-item" data-lazy="fade-up-sm">
+                                <img src="./src/assets/images/icons/scissor.svg" alt="" />
+                                EXCEPTIONAL PROPRIETARY COBALT STEEL
+                            </li>
+                            <li class="list-item" data-lazy="fade-up-sm">
+                                <img src="./src/assets/images/icons/scissor.svg" alt="" />
+                                HANDCRAFTED FOR INTENSE PERFORMANCE
+                            </li>
+                            <li class="list-item" data-lazy="fade-up-sm">
+                                <img src="./src/assets/images/icons/scissor.svg" alt="" />
+                                BALL BEARING FOR BETTER ALIGNMENT AND SMOOTHNESS
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials" data-lazy-block>
+                <div class="container">
+                    <div class="testimonials-center">
+                        <div class="wrapper title-wrapper">
+                            <h2 class="display-2 testimonials-title with-hat">
+                                <div class="startIcon" data-lazy="fade-down">
+                                    <img src="./src/assets/images/icons/hat.png" alt="" />
+                                </div>
+                                What Our Customers Say...
+                            </h2>
+                            <div class="arrows arrows-up">
+                                <div class="arrow-prev btn btn-outline-dark rounded-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="arrow-next btn btn-outline-dark rounded-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="card testimonial-card">
+                                <p class="card-description">
+                                    I was looking to buy a professional shear at a price I could afford and Exceptional
+                                    Edges did not disappoint. I recommend these to anyone looking for shears to last a
+                                    very long time.
+                                </p>
+                                <div class="card-info">
+                                    <h4 class="card-title">Sharon Sinly</h4>
+                                    <h5 class="card-subtitle">New York Pet Groomer</h5>
+                                </div>
+                            </div>
+                            <div class="card testimonial-card">
+                                <p class="card-description">
+                                    After looking endlessly online comparing quality and prices, I landed upon
+                                    Exceptional Edges and found what I needed. The customer service was excellent,
+                                    product was shipped quickly and the performance is amazing. Thank you Exceptional
+                                    Edges!
+                                </p>
+                                <div class="card-info">
+                                    <h4 class="card-title">Robert Wolden</h4>
+                                    <h5 class="card-subtitle">South Carolina Salon Owner</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrows arrows-down">
+                            <div class="arrow-prev btn btn-outline-dark rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="arrow-next btn btn-outline-dark rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq bg-warning" data-lazy-block>
+                <div class="container">
+                    <div class="faq-center">
+                        <div class="info">
+                            <div class="wrapper">
+                                <h6 class="faq-sup">Frequently Asked Questions</h6>
+                                <h2 class="display-2 faq-title with-hat">
+                                    <div class="startIcon" data-lazy="fade-down">
+                                        <img src="./src/assets/images/icons/hat.png" alt="" />
+                                    </div>
+                                    How Can We Help You?
+                                </h2>
+                            </div>
+                            <div class="faq-cover">
+                                <img src="./src/assets/images/faq.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseOne"
+                                    >
+                                        Do you offer a guarantee
+                                        <span class="endIcon">
+                                            <img src="./src/assets/images/icons/arrow-down.svg" alt="" />
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse"
+                                    data-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">Yes we offer a 30 day money-back guarantee.</div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseTwo"
+                                    >
+                                        Do you offer special pricing for larger orders?
+                                        <span class="endIcon">
+                                            <img src="./src/assets/images/icons/arrow-down.svg" alt="" />
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseTwo"
+                                    class="accordion-collapse collapse test"
+                                    data-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">Yes we offer a 30 day money-back guarantee.</div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseThree"
+                                    >
+                                        Do you offer sharpening services remotely?
+                                        <span class="endIcon">
+                                            <img src="./src/assets/images/icons/arrow-down.svg" alt="" />
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div
+                                    id="collapseThree"
+                                    class="accordion-collapse collapse"
+                                    data-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, aliquid
+                                        temporibus sequi provident explicabo, odio repellat, mollitia modi omnis atque
+                                        iure officia pariatur sint assumenda. Expedita nemo quibusdam quia assumenda.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <h2 class="banner-title">Master Distributor for Above Hair and Grooming Shears</h2>
+
+                            <a href="#/" class="btn btn-warning rounded-pill">
+                                <span class="center">Contact Me </span>
+                                <span class="endIcon">
+                                    <img src="./src/assets/images/icons/arrow-right.svg" alt="" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container container-top">
+                <div class="footer-center">
+                    <a class="footer-brand" href="./index.html">
+                        <img class="logo" src="./src/assets/images/icons/footer-logo.svg" alt="" />
+                        <!-- <img class="logo-sm" src="./src/assets/images/icons/logo-sm.svg" alt="" /> -->
+                    </a>
+                    <div class="follow-us">
+                        <h4 class="follow-us-title title">follow us</h4>
+                        <a
+                            href="mailto:thelocalsharpener2017@gmail.com"
+                            target="_blank"
+                            underline="hover"
+                            class="link-dark"
+                        >
+                            <div class="follow-us-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"
+                                    />
+                                </svg>
+                            </div>
+
+                            thelocalsharpener2017@gmail.com
+                        </a>
+                        <a
+                            href="https://www.google.com/maps/place/Cowpens,+SC+29330,+USA/@35.0205108,-81.8139018,15z/data=!3m1!4b1!4m5!3m4!1s0x88570b8bf45c5f43:0x4aada5b865242036!8m2!3d35.0167918!4d-81.8039916"
+                            target="_blank"
+                            underline="hover"
+                            class="link-dark"
+                        >
+                            <div class="follow-us-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        fill="#dba622"
+                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"
+                                    />
+                                </svg>
+                            </div>
+                            Cowpens, South Carolina 29330
+                        </a>
+                        <a href="tel:864-245-4359" underline="hover" class="link-dark">
+                            <div class="follow-us-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"
+                                    />
+                                </svg>
+                            </div>
+                            864-245-4359
+                        </a>
+                        <div class="follow-us-bottom text-warning">We sharpen shears. Call for details</div>
+                    </div>
+
+                    <div class="navigation">
+                        <h4 class="navigation-title title">Navigation</h4>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Home
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            About
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Services
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Products
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Contact
+                        </a>
+                    </div>
+
+                    <div class="quick-links">
+                        <h4 class="quick-links-title title">Quick Links</h4>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Testimonials
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            FAQ’s
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Why Us
+                        </a>
+                        <a href="#/" class="link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                <path
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                />
+                            </svg>
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <a href="#hero" class="btn btn-warning" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"
+                            />
+                        </svg>
+                    </a>
+                    © 2022, Exceptional Edges | All Rights Reserved | Terms & Conditions | Terms of service
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

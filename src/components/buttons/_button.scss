@@ -1,0 +1,277 @@
+.btn {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Now Alt", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    
+    letter-spacing: 0.02857em;
+    text-transform: none;
+    min-width: 64px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        white-space: nowrap;
+        @include mq(576px){
+            font-size: 18px;
+        }
+    &-sm {
+        font-size: 0.8125rem;
+        padding: 4px 10px;
+    }
+    &-lg {
+        font-size: 16px;
+        padding: 16px 40px 10px;
+        @include mq(576px){
+            font-size: 23px;
+        }
+    }
+    &-block {
+        width: 100%;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &-primary,
+    &-warning,
+    &-success,
+    &-secondary,
+    &-danger,
+    &-light {
+        color: color(dark);
+        // box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        //     0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            // box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            //     0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        }
+        &:active,
+        &.active {
+            // box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+            //     0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+            span.ripple {
+                background-color: rgba(255, 255, 255, 0.2);
+                transition: background-color 0s;
+            }
+        }
+    }
+
+    &-primary {
+        background-color: color(primary);
+        &:hover {
+            background-color: color(primary-hover);
+        }
+    }
+    &-success {
+        background-color: color(success);
+        &:hover {
+            background-color: color(success-hover);
+        }
+    }
+    &-warning {
+        background-color: color(warning);
+        &:hover {
+            // background-color: color(warning-hover);
+            background-color: color(success);
+        }
+    }
+    &-danger {
+        background-color: color(danger);
+        &:hover {
+            background-color: color(danger-hover);
+        }
+    }
+    &-secondary {
+        background-color: color(secondary);
+        &:hover {
+            background-color: color(secondary-hover);
+        }
+    }
+    &-light {
+        color: color(dark);
+        background-color: color(light);
+        &:hover {
+            background-color: color(light-hover);
+        }
+    }
+
+    &-outline,
+    &-text {
+        &-primary,
+        &-warning,
+        &-success,
+        &-secondary,
+        &-danger,
+        &-light,
+        &-dark {
+            padding: 5px 15px;
+            border: 1px solid;
+            box-shadow: none;
+            &:hover {
+                box-shadow: none;
+                border-color: currentColor;
+            }
+            span.ripple {
+                opacity: 0.2;
+            }
+            &:active,
+            &.active {
+                span.ripple {
+                    background-color: currentColor !important;
+                    transition: background-color 0s;
+                }
+            }
+        }
+
+        &-primary {
+            border-color: color(primary,0.5);
+            color: color(primary);
+            &:hover {
+                background-color: color(primary,0.04);
+            }
+        }
+        &-secondary {
+            border-color: color(secondary,0.5);
+            color: color(secondary);
+            &:hover {
+                background-color: color(secondary,0.04);
+            }
+        }
+        &-success {
+            border-color: color(success,0.5);
+            color: color(success);
+            &:hover {
+                background-color: color(success,0.04);
+            }
+        }
+        &-warning {
+            border-color: color(warning,0.5);
+            color: color(warning);
+            &:hover {
+                background-color: color(warning,0.04);
+            }
+        }
+        &-danger {
+            border-color: color(danger,0.5);
+            color: color(danger);
+            &:hover {
+                background-color: color(danger,0.04);
+            }
+        }
+        &-light {
+            border-color: color(light,0.5);
+            color: color(light);
+            &:hover {
+                background-color: color(light,0.04);
+            }
+        }
+        &-dark {
+            border-color: color(dark);
+            color: color(dark);
+            
+            &:hover {
+                border-color: color(warning);
+                path {
+                    
+                    fill: color(warning);
+                }
+            }
+        }
+
+    }
+
+    &-text {
+        &-primary,
+        &-warning,
+        &-success,
+        &-secondary,
+        &-danger,
+        &-light {
+            padding: 6px 8px;
+            border: none;
+            &:hover {
+                border-color: none;
+            }
+        }
+    }
+
+    span {
+        display: inherit;
+        &.ripple {
+            pointer-events: none;
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 1s linear forwards;
+            transition: background-color 1s ease-out;
+        }
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+            }
+        }
+        &.startIcon {
+            margin-left: -4px;
+            margin-right: 8px;
+        }
+        &.endIcon {
+            margin-right: -4px;
+            margin-left: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 33px;
+            height: 33px;
+            img {
+                width: 15px;
+                height: auto;
+            
+            }
+        }
+     
+    }
+    svg {
+        user-select: none;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        flex-shrink: 0;
+        // font-size: 20px;
+        // color: color(dark);
+        font-size: 1.25em;
+        path {
+            fill: currentColor;
+            transition: fill .3s ease;
+        }
+    }
+}
