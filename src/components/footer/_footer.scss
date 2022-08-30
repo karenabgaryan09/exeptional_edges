@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 0;
     color: color(light);
     .container-top {
@@ -155,6 +155,7 @@
 }
 @media (min-width: 992px) {
     .footer {
+        padding-top: 200px;
         &-center {
             justify-content: space-between;
         }
