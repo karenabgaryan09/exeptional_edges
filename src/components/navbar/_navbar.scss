@@ -364,7 +364,8 @@
                 // width: auto;
                 .form-control {
                     max-width: 170px;
-                    &:focus {
+                    &:focus,
+                    &:not(:placeholder-shown) {
                         max-width: 250px;
                     }
                 }

@@ -24,7 +24,7 @@ const FadeOnScreen = (function () {
     };
     const hideLazyElements = () => {
         document
-            .querySelectorAll("section [data-lazy]")
+            .querySelectorAll("[data-lazy-block] [data-lazy]")
             ?.forEach((element) => element.classList.remove("lazy-animate"));
     };
     const createObserver = () => {
